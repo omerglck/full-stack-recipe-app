@@ -6,6 +6,8 @@ const app = express();
 
 // cors hatalarını önleyen middleware(oto headerlar ekler)
 app.use(cors());
+// bodydeki json verilerini js verilerine çevireecek middleware
+app.use(express.json())
 
 // servera tarif ile alakalı routerları tanımladık
 app.use(recipeRouter);
